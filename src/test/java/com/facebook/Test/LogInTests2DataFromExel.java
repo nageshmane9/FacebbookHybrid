@@ -23,20 +23,19 @@ public class LogInTests2DataFromExel extends Base     // Extended base class and
 {
 	
 	
-
+    
 	//public static WebDriver driver;
 	public static Login login;
-	
 	
 	
 	@Test(priority=1)
 	public void loginWithInvalicredentials() throws Exception
 	{
-		XSSFSheet sheet = ExelData.data();    //Exel data is class 
-		
+		XSSFSheet sheet = ExelData.data();    //Exel data is class // It support .xlsx extension
+		                                                           // Workbookfactory supports all extension
 		int rowCount= sheet.getPhysicalNumberOfRows();
 		
-		for(int i=1;i<rowCount ;i++)       //              form second row
+		for(int i=1;i<rowCount ;i++)       //              from second row
 		{
 			XSSFRow row =sheet.getRow(i);
 			
